@@ -12,18 +12,6 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/manytomanycdjpa?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="admin"/>
-			
-			
-			<!-- setup con H2 
-			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-			-->
-			<!-- viene creato un file "C:\Users\mio_utente_su_windows\gestionemunicipioreverse.mv.db" -->
-			<!--
-			<property name="javax.persistence.jdbc.url"    value="jdbc:h2:tcp://localhost/~/gestionemunicipioreverse" />
-			<property name="javax.persistence.jdbc.user" value="sa" />
-			<property name="javax.persistence.jdbc.password" value="" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-			-->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 			<property name="hibernate.connection.pool_size" value="10"/>
 			

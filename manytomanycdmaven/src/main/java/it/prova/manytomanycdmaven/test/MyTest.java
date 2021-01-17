@@ -21,11 +21,11 @@ public class MyTest {
 			// TEST INSERIMENTO NUOVO CD
 			// ******************************************************
 			// *********************************************************************************
-//			System.out.println("Inserimento nuovo cd...");
-//			Cd cdInstance = new Cd("titolo1","autore1",new SimpleDateFormat("dd/MM/yyyy").parse("24/09/2019"));
-//			cdServiceInstance.inserisciNuovo(cdInstance);
-//			if(cdServiceInstance.caricaSingoloElemento(cdInstance.getId()) != null)
-//				System.out.println("Inserimento nuovo cd...OK: "+cdInstance);
+			System.out.println("Inserimento nuovo cd...");
+			Cd cdInstance = new Cd("titolo1","autore1",new SimpleDateFormat("dd/MM/yyyy").parse("24/09/2019"));
+			cdServiceInstance.inserisciNuovo(cdInstance);
+			if(cdServiceInstance.caricaSingoloElemento(cdInstance.getId()) != null)
+				System.out.println("Inserimento nuovo cd...OK: "+cdInstance);
 //			
 //			//*********************************************************************************
 //			//TEST CARICA CD  *****************************************************************
@@ -118,7 +118,7 @@ public class MyTest {
 
 			// TEST RIMUOVI GENERE
 //			System.out.println("RIMUOVIAMO UN GENERE...");
-//			Long idGenereDaCaricarePerRimozione = 4L;
+//			Long idGenereDaCaricarePerRimozione = 1L;
 //			Genere genereDaCaricarePerRimozione = genereServiceInstance
 //					.caricaSingoloElemento(idGenereDaCaricarePerRimozione);
 //			if (genereDaCaricarePerRimozione != null) {
