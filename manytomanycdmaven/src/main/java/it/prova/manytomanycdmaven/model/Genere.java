@@ -2,6 +2,7 @@ package it.prova.manytomanycdmaven.model;
 
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "genere")
@@ -61,6 +63,19 @@ public class Genere {
 	public String toString() {
 		
 		return "Genere [id=" + id + ", descrizione=" + descrizione + "]";
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+	   if (this == o) return true;
+	   if (o == null || getClass() != o.getClass()) return false;
+	   Genere genere = (Genere) o;
+	   return Objects.equals(id, genere.id);
+	}
+
+	@Override
+	public int hashCode() {
+	   return Objects.hash(id);
 	}
 
 }

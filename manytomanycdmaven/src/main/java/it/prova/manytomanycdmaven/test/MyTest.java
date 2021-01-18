@@ -21,32 +21,32 @@ public class MyTest {
 			// TEST INSERIMENTO NUOVO CD
 			// ******************************************************
 			// *********************************************************************************
-			System.out.println("Inserimento nuovo cd...");
-			Cd cdInstance = new Cd("titolo1","autore1",new SimpleDateFormat("dd/MM/yyyy").parse("24/09/2019"));
-			cdServiceInstance.inserisciNuovo(cdInstance);
-			if(cdServiceInstance.caricaSingoloElemento(cdInstance.getId()) != null)
-				System.out.println("Inserimento nuovo cd...OK: "+cdInstance);
+//			System.out.println("Inserimento nuovo cd...");
+//			Cd cdInstance = new Cd("titolo1","autore1",new SimpleDateFormat("dd/MM/yyyy").parse("24/09/2019"));
+//			cdServiceInstance.inserisciNuovo(cdInstance);
+//			if(cdServiceInstance.caricaSingoloElemento(cdInstance.getId()) != null)
+//				System.out.println("Inserimento nuovo cd...OK: "+cdInstance);
 //			
 //			//*********************************************************************************
 //			//TEST CARICA CD  *****************************************************************
 //			//*********************************************************************************
-			Long idCdDaCaricare = 1L;
-			System.out.println("Carica cd con id.." + idCdDaCaricare);
-			Cd cdDaCaricare = cdServiceInstance.caricaSingoloElemento(idCdDaCaricare);
-			if (cdDaCaricare != null)
-				System.out.println("Cd caricato con successo: " + cdDaCaricare);
-			else
-				System.out.println("Cd non trovato.");
-
-			// TEST ELENCA CD
-			System.out.println("Carica tutti i cd presenti sul db..");
-			List<Cd> listaCd = cdServiceInstance.listAll();
-			if (!listaCd.isEmpty())
-				for (Cd cdItem : listaCd) {
-					System.out.println(cdItem);
-				}
-			else
-				System.out.println("Non sono presenti cd sul db.");
+//			Long idCdDaCaricare = 1L;
+//			System.out.println("Carica cd con id.." + idCdDaCaricare);
+//			Cd cdDaCaricare = cdServiceInstance.caricaSingoloElemento(idCdDaCaricare);
+//			if (cdDaCaricare != null)
+//				System.out.println("Cd caricato con successo: " + cdDaCaricare);
+//			else
+//				System.out.println("Cd non trovato.");
+//
+//			// TEST ELENCA CD
+//			System.out.println("Carica tutti i cd presenti sul db..");
+//			List<Cd> listaCd = cdServiceInstance.listAll();
+//			if (!listaCd.isEmpty())
+//				for (Cd cdItem : listaCd) {
+//					System.out.println(cdItem);
+//				}
+//			else
+//				System.out.println("Non sono presenti cd sul db.");
 
 			// TEST AGGIORNA CD
 //			System.out.println("Aggiorno il campo autore di un cd..");
@@ -100,13 +100,13 @@ public class MyTest {
 //			}
 
 			// TEST CARICA GENERE
-			Long idGenereDaCaricare = 1L;
-			System.out.println("Carica genere con id.." + idGenereDaCaricare);
-			Genere genereDaCaricare = genereServiceInstance.caricaSingoloElemento(idGenereDaCaricare);
-			if (genereDaCaricare != null)
-				System.out.println("Genere caricato con successo: " + genereDaCaricare);
-			else
-				System.out.println("Genere non trovato.");
+//			Long idGenereDaCaricare = 1L;
+//			System.out.println("Carica genere con id.." + idGenereDaCaricare);
+//			Genere genereDaCaricare = genereServiceInstance.caricaSingoloElemento(idGenereDaCaricare);
+//			if (genereDaCaricare != null)
+//				System.out.println("Genere caricato con successo: " + genereDaCaricare);
+//			else
+//				System.out.println("Genere non trovato.");
 
 			// TEST AGGIORNA GENERE
 //			System.out.println("Aggiorno il campo descrizione di un genere..");
@@ -117,17 +117,17 @@ public class MyTest {
 //			System.out.println("Adesso la descrizione è cambiata in "+genereDaAggiornare.getDescrizione());
 
 			// TEST RIMUOVI GENERE
-//			System.out.println("RIMUOVIAMO UN GENERE...");
-//			Long idGenereDaCaricarePerRimozione = 1L;
-//			Genere genereDaCaricarePerRimozione = genereServiceInstance
-//					.caricaSingoloElemento(idGenereDaCaricarePerRimozione);
-//			if (genereDaCaricarePerRimozione != null) {
-//				System.out.println("Genere caricato con successo: " + genereDaCaricarePerRimozione);
-//				// rimuovo
-//				genereServiceInstance.rimuovi(genereDaCaricarePerRimozione);
-//			} else
-//				System.out.println("Genere non trovato.");
-//			System.out.println("...end...");
+			System.out.println("RIMUOVIAMO UN GENERE...");
+			Long idGenereDaCaricarePerRimozione = 1L;
+			Genere genereDaCaricarePerRimozione = genereServiceInstance
+					.caricaSingoloElemento(idGenereDaCaricarePerRimozione);
+			if (genereDaCaricarePerRimozione != null) {
+				System.out.println("Genere caricato con successo: " + genereDaCaricarePerRimozione);
+				// rimuovo
+				genereServiceInstance.rimuovi(genereDaCaricarePerRimozione);
+			} else
+				System.out.println("Genere non trovato.");
+			System.out.println("...end...");
 //			
 //			//*********************************************************************************
 //			//CREAZIONE CD E CREAZIONE GENERE  IN UN SOLO COLPO  ******************************

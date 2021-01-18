@@ -14,6 +14,8 @@ import it.prova.manytomanycdmaven.model.Genere;
 public class GenereServiceImpl implements GenereService {
 
 	private GenereDAO genereDAO;
+	
+	private CdDAO cdDAO;
 
 	@Override
 	public List<Genere> listAll() throws Exception {
@@ -109,17 +111,17 @@ EntityManager entityManager = EntityManagerUtil.getEntityManager();
 
 			entityManager.getTransaction().begin();
 			
-			CdDAO cdDAO = MyDaoFactory.getCdDAOInstance();
+			cdDAO = MyDaoFactory.getCdDAOInstance();
 			cdDAO.setEntityManager(entityManager);
 
 			List<Cd> lista = cdDAO.findAllByGenere(genereInstance);
 			
 			for (Cd cdItem : lista) {
-				cdItem.removeFromGeneri(genereInstance);
+				cdItem.getGeneri().remove(genereInstance);
 				cdDAO.update(cdItem);
-			}
+			} 
 
-			cdDAO.setEntityManager(entityManager);
+			genereDAO.setEntityManager(entityManager);
 			
 			genereDAO.delete(genereInstance);
 			

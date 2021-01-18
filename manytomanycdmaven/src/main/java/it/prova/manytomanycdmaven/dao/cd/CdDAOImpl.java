@@ -53,7 +53,7 @@ public class CdDAOImpl implements CdDAO {
 	
 	@Override
 	public List<Cd> findAllByGenere(Genere genereInstance) throws Exception {
-		TypedQuery<Cd> query = entityManager.createQuery("select c FROM Cd c join c.generi g where g = :genere", Cd.class);
+		TypedQuery<Cd> query = entityManager.createQuery("select c FROM Cd c left join c.generi g where g = :genere", Cd.class);
 		query.setParameter("genere", genereInstance);
 		return query.getResultList();
 	}
